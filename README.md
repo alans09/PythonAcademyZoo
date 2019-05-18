@@ -3,14 +3,12 @@
 
 *Obsah package*:
 
-`zoo.py`
-Obsahuje zakladnu triedu Zoo(), ktora je stavebny prvok aplikacie
+Rework na databazu.
 
-`shop.py`
-Obsahuje definiciu obchodov Shop()
+`struktura adresarov:`
 
-`pavilion.py`
-Definicia pavilonu so zvieratami
-
-`animals.py`
-Definicia zvierata ako rodica a konkretnych zvierat ako potomkov
+```
+./database/database.db    # databaza so zvieratami
+./zoo/   # databazovy model
+main.py    # hlavna logika programu
+```
