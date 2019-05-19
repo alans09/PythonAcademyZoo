@@ -1,6 +1,8 @@
 from unittest import TestCase
-from zoo.animals import *
+from zoo.animal import *
 from zoo.shop import *
+from zoo.pavilion import *
+from zoo.zoo import Zoo
 
 
 class TestZoo(TestCase):
