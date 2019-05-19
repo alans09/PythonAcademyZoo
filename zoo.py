@@ -9,7 +9,10 @@ class Zoo:
         "Saturday": "9:00 - 17:00",
         "Sunday": "Closed"
     }
-    price_list = {"sezona": 12}
+    price_list = {
+        "Main-season": 12,
+        "Off-season": 8
+    }
     entered = False
 
     def __init__(self, name, address, pavilions=None, shops=None):
@@ -24,6 +27,12 @@ class Zoo:
             ret += f"{key:<20}{self.opening_hours[key]:>20}\n"
         return ret
 
+    def show_entrance_fees(self):
+        ret = ""
+        for k,v in self.price_list.items():
+            ret += f"{k:<20}{v:>20}\n"
+        return ret
+
     def change_opening_hours(self, key, value):
         self.opening_hours[key] = value
 
@@ -34,7 +43,7 @@ class Zoo:
         """
         ret = ""
         for idx, pavilion in enumerate(self.pavilions):
-            ret += f"{idx:<5} {pavilion.name:^50}"
+            ret += f"{idx:<5} {pavilion.name:^50}\n"
         return ret
 
     def add_pavilion(self, pavilion):
@@ -62,24 +71,3 @@ class Zoo:
             self.shops.append(shop)
         else:
             self.shops = [shop]
-
-    def enter(self):
-        self.entered = True
-
-    def feed(self):
-        pass
-
-    def pay_entry_fee(self):
-        pass
-
-
-if __name__ == "__main__":
-    meerkat = Meerkat("Karol", "3", "M")
-    meerkatF = Meerkat("Natalia", "2", "F")
-    sand1 = Pavilion("Sand", "sand1", animals=[meerkat, meerkatF])
-    dingo1 = Dingo("Stefan", "12", "M")
-    zoo = Zoo("Zoo1", "Einsteinova23, Bratislava", pavilions=[sand1])
-    sand1.add_animal(dingo1)
-    for animal in zoo.pavilions[0].list_animals():
-        print(animal)
-    print(zoo.list_pavilions())

@@ -122,4 +122,3 @@ class Duck(Animal):
 
     def sound(self):
         return "quaaack"
-

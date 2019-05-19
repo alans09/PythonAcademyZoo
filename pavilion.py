@@ -15,6 +15,15 @@ class Pavilion:
         else:
             self.animals = [animal]
 
+    def list_animals(self):
+        """
+        a) pavilon1
+        b) pavilon2
+        """
+        ret = ""
+        for idx, animal in enumerate(self.animals):
+            ret += f"{idx:<5} {animal.name:^50}\n"
+        return ret
 
     def remove_animal(self, animal):
         pass
