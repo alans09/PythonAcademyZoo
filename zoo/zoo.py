@@ -1,6 +1,5 @@
-from pavilion import *
-from shop import *
-from animals import *
+from zoo.pavilion import *
+from zoo.shop import *
 
 
 class Zoo:

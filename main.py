@@ -1,4 +1,5 @@
-from zoo import *
+from zoo.zoo import *
+from zoo.animals import *
 
 
 def show_main_menu():

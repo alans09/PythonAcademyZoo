@@ -1,4 +1,4 @@
-from animals import Animal
+from zoo.animals import Animal
 
 
 class Pavilion:
